@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How It Works | Mustang Campus Helper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav solid">
+    <a class="brand" href="index.html"><span class="logo-dot"></span>Mustang Campus Helper</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">How It Works</a>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <p class="eyebrow">About the project</p>
+    <h1>One chat instead of twelve browser tabs</h1>
+    <p class="lead">Why we built Mustang Campus Helper, how it finds answers, and what it can (and can't) do.</p>
+  </section>
+
+  <section class="content">
+    <div class="block reveal">
+      <h2>The problem</h2>
+      <p>Graduate students at SMU, especially working professionals in the Cox School of Business, juggle classes, jobs and families. When a routine question comes up, like whether they need a parking permit for an evening class or how long they can keep a library book, the answer is usually somewhere on smu.edu. Finding it often means clicking through several departments' pages, each with its own layout and vocabulary.</p>
+      <p>Those minutes add up, and students who can't find an answer quickly tend to guess, email the wrong office, or show up to the wrong place.</p>
+    </div>
+
+    <div class="block reveal">
+      <h2>Our solution</h2>
+      <p>Mustang Campus Helper is an AI chatbot that gives short, accurate answers to the questions grad students ask most. Instead of searching the web, it is restricted to a curated knowledge base of official SMU pages covering libraries, parking and IT support, plus a one-page quick-facts sheet. If the answer is not in those sources, it says so and points the student to the right office rather than making something up.</p>
+    </div>
+
+    <div class="block reveal">
+      <h2>How a conversation works</h2>
+      <ol class="steps">
+        <li><span>1</span><div><strong>Pick a topic.</strong> Choose Libraries, Parking, IT Help or Something else from the buttons.</div></li>
+        <li><span>2</span><div><strong>Ask in your own words.</strong> Type a question like &ldquo;What hours is permit parking enforced?&rdquo;</div></li>
+        <li><span>3</span><div><strong>Get a grounded answer.</strong> The AI searches only the SMU knowledge base and replies with the key facts and a link or contact.</div></li>
+        <li><span>4</span><div><strong>Keep going or wrap up.</strong> Ask another question, switch topics, or end the chat.</div></li>
+      </ol>
+    </div>
+
+    <div class="block reveal">
+      <h2>What it knows</h2>
+      <table class="kb">
+        <thead><tr><th>Topic</th><th>Example questions it can answer</th></tr></thead>
+        <tbody>
+          <tr><td>Libraries</td><td>Loan periods for graduate students, after-hours access with an SMU ID, how to reach Ask Us</td></tr>
+          <tr><td>Parking</td><td>How virtual permits work, when permits go on sale, enforcement hours, citations, game-day moves</td></tr>
+          <tr><td>IT Help</td><td>IT Help Desk phone, email and live chat, its location in Fondren Library West, getting started with SMU accounts</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="block reveal">
+      <h2>Built with</h2>
+      <p>The chatbot was designed in Chatling's flow builder, using topic buttons, variables, a knowledge-base AI response with a &ldquo;not found&rdquo; path, and custom instructions that keep answers under 120 words and never ask for passwords or ID numbers. This website was written with help from an AI coding assistant, the background video was generated with Meta AI, and the site is hosted on GitHub Pages.</p>
+    </div>
+
+    <div class="block reveal try">
+      <h2>Try it now</h2>
+      <p>Open the chat bubble in the bottom-right corner and try one of these:</p>
+      <ul class="prompts">
+        <li>Parking &rarr; &ldquo;What hours is permit parking enforced on campus?&rdquo;</li>
+        <li>IT Help &rarr; &ldquo;How do I contact the IT Help Desk and where is it located?&rdquo;</li>
+        <li>Libraries &rarr; &ldquo;How long can graduate students check out books?&rdquo;</li>
+      </ul>
+      <a href="index.html" class="btn btn-primary">&larr; Back to home</a>
+    </div>
+  </section>
+
+  <footer>
+    <p class="fineprint">ITOM 6216 class project by Sarah Kelly. Not an official SMU service; always confirm details on smu.edu.</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <!-- Chatling chatbot -->
+  <script> window.chtlConfig = { chatbotId: "6682119735" } </script>
+  <script async data-id="6682119735" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>
