@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mustang Campus Helper | Quick campus answers for SMU grad students</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html"><span class="logo-dot"></span>Mustang Campus Helper</a>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">How It Works</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <video class="hero-video" autoplay muted loop playsinline preload="auto">
+      <source src="campus.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Built for SMU graduate students</p>
+      <h1>Campus answers in seconds, not tabs.</h1>
+      <p class="lead">Libraries, parking and IT help, answered by an AI assistant trained only on official SMU pages.</p>
+      <div class="hero-buttons">
+        <a href="about.html" class="btn btn-primary">See how it works &rarr;</a>
+        <button class="btn btn-ghost" onclick="openChat()">Ask the bot now</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="card reveal">
+      <div class="icon">&#128218;</div>
+      <h3>Libraries</h3>
+      <p>Loan periods, after-hours building access and where to get research help.</p>
+    </div>
+    <div class="card reveal">
+      <div class="icon">&#128663;</div>
+      <h3>Parking</h3>
+      <p>Virtual permits, when they go on sale, enforcement hours and game-day rules.</p>
+    </div>
+    <div class="card reveal">
+      <div class="icon">&#128187;</div>
+      <h3>IT Help</h3>
+      <p>How to reach the IT Help Desk by phone, email or chat, and where to find it.</p>
+    </div>
+  </section>
+
+  <!-- X-Factor: live parking status checker -->
+  <section class="parking-check reveal" id="parking">
+    <div class="pc-text">
+      <p class="eyebrow">Live tool</p>
+      <h2>Do I need a permit right now?</h2>
+      <p>Checks the current Dallas time against SMU's posted permit-enforcement hours (7 a.m. to 7 p.m., Monday through Friday, during fall and spring semesters).</p>
+    </div>
+    <div class="pc-status" id="pcStatus">
+      <div class="pc-light" id="pcLight"></div>
+      <div>
+        <div class="pc-headline" id="pcHeadline">Checking&hellip;</div>
+        <div class="pc-detail" id="pcDetail"></div>
+        <div class="pc-clock" id="pcClock"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta reveal">
+    <h2>Got a question?</h2>
+    <p>Click the chat bubble in the corner, pick a topic, and type your question.</p>
+    <a href="about.html" class="btn btn-primary">Learn more about the project</a>
+  </section>
+
+  <footer>
+    <div class="xfactor">
+      <strong>Creative X-Factor:</strong> A live &ldquo;Do I need a permit right now?&rdquo; checker. It reads the current Dallas time, compares it with SMU&rsquo;s permit-enforcement hours, and shows a green or red status light with a countdown to the next change, refreshing every second.
+    </div>
+    <p class="fineprint">ITOM 6216 class project by Sarah Kelly. Not an official SMU service; always confirm details on smu.edu.</p>
+  </footer>
+
+  <script src="main.js"></script>
+  <!-- Chatling chatbot -->
+  <script> window.chtlConfig = { chatbotId: "6682119735" } </script>
+  <script async data-id="6682119735" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>
