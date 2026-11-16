@@ -10,6 +10,12 @@ if (vid) {
   vid.muted = true;
   const p = vid.play();
   if (p && p.catch) p.catch(() => {});
+  // Loop a 5-second segment (1.5s to 6.5s) of the AI-generated clip
+  const LOOP_START = 1.5, LOOP_END = 6.5;
+  vid.addEventListener('timeupdate', () => {
+    if (vid.currentTime >= LOOP_END || vid.currentTime < LOOP_START - 0.2) vid.currentTime = LOOP_START;
+  });
+  vid.addEventListener('ended', () => { vid.currentTime = LOOP_START; vid.play(); });
 }
 
 // Open the Chatling widget from the hero button
